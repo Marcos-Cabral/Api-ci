@@ -32,3 +32,13 @@ jobs:
 
     - name: Listar archivos publicados
       run: ls -l ./Publish  # Esto listará los archivos en la carpeta Publish
+
+    - name: Agregar archivos generados al repositorio
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add ./Publish/*
+        git commit -m "Agregar archivos generados por el publish"
+        git push origin main  # Reemplaza 'main' con la rama correcta si es necesario
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
