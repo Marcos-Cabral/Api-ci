@@ -1,0 +1,35 @@
+name: .NET Core CI/CD
+
+on:
+  push:
+    branches:
+      - main  # Cambia esto si tu rama principal tiene otro nombre
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.0'  # Cambia esto a la versión de .NET que estés usando
+
+    - name: Restore dependencies
+      run: dotnet restore "Api.sln"  # Ruta al archivo .sln
+
+    - name: Build
+      run: dotnet build "Api.sln" --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test "Api.sln" --no-restore --verbosity normal
+
+    - name: Publish
+      run: dotnet publish "Api.csproj" --configuration Release --output ./publish
+
+    - name: Deploy
+      run: |
+        echo "Aquí es donde iría el script para desplegar tu aplicación."
