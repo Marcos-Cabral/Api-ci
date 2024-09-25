@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\mcabral\\Desktop\\Api-ci\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{844B5820-BCE2-455C-9B01-76854A7A2FB3}|Api.csproj|c:\\users\\mcabral\\desktop\\api-ci\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{844B5820-BCE2-455C-9B01-76854A7A2FB3}|Api.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{844B5820-BCE2-455C-9B01-76854A7A2FB3}|Api.csproj|c:\\users\\mcabral\\desktop\\api-ci\\controllers\\ordenescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{844B5820-BCE2-455C-9B01-76854A7A2FB3}|Api.csproj|solutionrelative:controllers\\ordenescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -25,20 +25,16 @@
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\mcabral\\Desktop\\Api-ci\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\mcabral\\Desktop\\Api-ci\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Title": "OrdenesController.cs",
+              "DocumentMoniker": "C:\\Users\\mcabral\\Desktop\\Api-ci\\Controllers\\OrdenesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdenesController.cs",
+              "ToolTip": "C:\\Users\\mcabral\\Desktop\\Api-ci\\Controllers\\OrdenesController.cs",
+              "RelativeToolTip": "Controllers\\OrdenesController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAkwBgAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T22:20:50.608Z",
+              "WhenOpened": "2024-09-25T23:36:57.17Z",
               "EditorCaption": ""
             }
           ]
