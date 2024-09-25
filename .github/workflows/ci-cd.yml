@@ -28,7 +28,12 @@ jobs:
       run: dotnet test "Api.sln" --no-restore --verbosity normal
 
     - name: Publicar la aplicación
-      run: dotnet publish "Api.csproj" --configuration Release --output ./Publish --self-contained true --runtime linux-x64 --verbosity detailed
+      run: dotnet publish "Api.csproj" --configuration Release --output ./Publish --self-contained true --runtime linux-x64
+
+    - name: Mover archivos de publicación a una carpeta accesible
+      run: |
+        mkdir -p ${{ github.workspace }}/artifacts
+        mv ./Publish/* ${{ github.workspace }}/artifacts/
 
     - name: Desplegar
       run: |
