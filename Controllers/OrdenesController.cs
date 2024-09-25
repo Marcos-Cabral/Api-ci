@@ -15,7 +15,7 @@ namespace Api.Controllers
     [Route("[controller]")]
     public class OrdenesController : ControllerBase
     {
-        public List<Orden> _ordenes { get; set; }
+        //public List<Orden> _ordenes { get; set; }
 
         public OrdenesController()
         {
