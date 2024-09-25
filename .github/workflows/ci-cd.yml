@@ -27,7 +27,7 @@ jobs:
       run: dotnet test "Api.sln" --no-restore --verbosity normal
 
     - name: Se arma el Publish
-      run: dotnet publish "Api.csproj" --configuration Release --output ./Publish
+      run: dotnet publish "Api.csproj" --configuration Release --output ./Publish --self-contained true --runtime linux-x64
 
     - name: Deploy
       run: |
