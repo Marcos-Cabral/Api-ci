@@ -18,23 +18,17 @@ jobs:
       with:
         dotnet-version: '7.0'  
 
-    - name: Restaurar las dependencias
+    - name: Restaurar dependencias
       run: dotnet restore "Api.sln" 
 
     - name: Compilar el proyecto
       run: dotnet build "Api.sln" --configuration Release --no-restore
 
-    - name: Ejecutar los Tests
+    - name: Ejecutar tests
       run: dotnet test "Api.sln" --no-restore --verbosity normal
 
     - name: Publicar la aplicación
-      run: dotnet publish "Api.csproj" --configuration Release --output ./Publish --self-contained true --runtime linux-x64
+      run: dotnet publish "Api.csproj" -c Release --output ./Publish --self-contained true --runtime linux-x64
 
-    - name: Mover archivos de publicación a una carpeta accesible
-      run: |
-        mkdir -p ${{ github.workspace }}/artifacts
-        mv ./Publish/* ${{ github.workspace }}/artifacts/
-
-    - name: Desplegar
-      run: |
-        echo "Acá se ejecutaría el deploy."
+    - name: Listar archivos publicados
+      run: ls -l ./Publish  # Esto listará los archivos en la carpeta Publish
