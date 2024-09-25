@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\mcabral\\Desktop\\Api-ci\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{844B5820-BCE2-455C-9B01-76854A7A2FB3}|Api.csproj|c:\\users\\mcabral\\desktop\\api-ci\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{844B5820-BCE2-455C-9B01-76854A7A2FB3}|Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{844B5820-BCE2-455C-9B01-76854A7A2FB3}|Api.csproj|c:\\users\\mcabral\\desktop\\api-ci\\controllers\\ordenescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{844B5820-BCE2-455C-9B01-76854A7A2FB3}|Api.csproj|solutionrelative:controllers\\ordenescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{844B5820-BCE2-455C-9B01-76854A7A2FB3}|Api.csproj|c:\\users\\mcabral\\desktop\\api-ci\\services\\ordenesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{844B5820-BCE2-455C-9B01-76854A7A2FB3}|Api.csproj|solutionrelative:services\\ordenesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,12 +35,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mcabral\\Desktop\\Api-ci\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\mcabral\\Desktop\\Api-ci\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T23:47:25.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrdenesService.cs",
+              "DocumentMoniker": "C:\\Users\\mcabral\\Desktop\\Api-ci\\Services\\OrdenesService.cs",
+              "RelativeDocumentMoniker": "Services\\OrdenesService.cs",
+              "ToolTip": "C:\\Users\\mcabral\\Desktop\\Api-ci\\Services\\OrdenesService.cs",
+              "RelativeToolTip": "Services\\OrdenesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T23:45:34.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "OrdenesController.cs",
               "DocumentMoniker": "C:\\Users\\mcabral\\Desktop\\Api-ci\\Controllers\\OrdenesController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrdenesController.cs",
               "ToolTip": "C:\\Users\\mcabral\\Desktop\\Api-ci\\Controllers\\OrdenesController.cs",
               "RelativeToolTip": "Controllers\\OrdenesController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAkwBgAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAUwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T23:36:57.17Z",
               "EditorCaption": ""
