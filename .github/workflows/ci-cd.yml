@@ -40,7 +40,7 @@ jobs:
         git config --global user.name 'GitHub Action'
         git config --global user.email 'action@github.com'
         git add ./Publish/*
-        git commit -m "Agregar archivos generados por el publish" || echo "No hay cambios para confirmar"
+        git commit -m "Publish del '${{ github.event.head_commit.timestamp }}' " || echo "No hay cambios para confirmar"
         git push origin main  # Reemplaza 'main' con la rama correcta si es necesario
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
