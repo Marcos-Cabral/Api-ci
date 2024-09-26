@@ -60,8 +60,13 @@ jobs:
       with:
         dotnet-version: '7.0'
 
+    - name: Limpiar carpeta Publish
+      run: |
+        rm -rf ./Publish
+    
     - name: Publicar la aplicación
-      run: dotnet publish "Api/Api.csproj" -c Release --output ./Publish --self-contained true --runtime linux-x64  
+      run: dotnet publish "Api/Api.csproj" -c Release --output ./Publish --self-contained true --runtime linux-x64
+ 
 
     - name: Agregar archivos generados al repositorio
       run: |
