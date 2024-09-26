@@ -62,7 +62,7 @@ jobs:
 
     - name: Limpiar carpeta Publish
       run: |
-        rm -rf ./Publish
+        rm -rf ./Publish/*
     
     - name: Publicar la aplicación
       run: dotnet publish "Api/Api.csproj" -c Release --output ./Publish --self-contained true --runtime linux-x64
