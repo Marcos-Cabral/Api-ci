@@ -16,10 +16,10 @@ namespace Services.Services
             _ordenes = A.ListOf<Orden>(40);
         }
 
-        //public List<Orden> GetAll()
-        //{
-        //    return _ordenes;
-        //}
+        public List<Orden> GetAll()
+        {
+            return _ordenes;
+        }
 
         public Orden? GetById(int id)
         {
