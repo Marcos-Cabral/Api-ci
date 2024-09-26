@@ -4,8 +4,13 @@ on:
   push:
     branches:
       - main 
+
 permissions:
   contents: write
+
+concurrency:
+  group: ci-build-main
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -33,7 +38,7 @@ jobs:
       run: dotnet build "Testing/Testing.csproj" --configuration Release --no-restore  
 
     - name: Ejecutar tests
-      run: dotnet test "Testing/Testing.csproj" --no-restore 
+      run: dotnet test "Testing/Testing.csproj" --no-restore --verbosity minimal
 
     - name: Publicar la aplicación
       run: dotnet publish "Api/Api.csproj" -c Release --output ./Publish --self-contained true --runtime linux-x64  
