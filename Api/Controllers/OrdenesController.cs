@@ -22,7 +22,7 @@ namespace Api.Controllers
         }
 
         [HttpGet(Name = "OrdenById")]
-        public Orden GetById(int id)
+        public Orden? GetById(int id)
         {
             return _ordenesService.GetById(id);
         }

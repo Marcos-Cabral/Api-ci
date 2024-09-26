@@ -3,6 +3,6 @@
     public interface IOrdenesService
     {
         List<Orden> GetAll();
-        Orden GetById(int id);
+        Orden? GetById(int id);
     }
 }

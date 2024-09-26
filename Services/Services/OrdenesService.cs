@@ -21,7 +21,7 @@ namespace Services.Services
             return _ordenes;
         }
 
-        public Orden GetById(int id)
+        public Orden? GetById(int id)
         {
             return _ordenes.FirstOrDefault(e => e.Id == id);
         }
