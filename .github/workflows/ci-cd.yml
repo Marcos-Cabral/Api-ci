@@ -38,7 +38,7 @@ jobs:
       run: dotnet build "Testing/Testing.csproj" --configuration Release --no-restore  
 
     - name: Ejecutar tests
-      run: dotnet test "Testing/Testing.csproj" --no-restore --verbosity normal --logger "console;verbosity=normal"
+      run: dotnet test "Testing/Testing.csproj" --no-restore --verbosity minimal
 
   publish:
     runs-on: ubuntu-latest
