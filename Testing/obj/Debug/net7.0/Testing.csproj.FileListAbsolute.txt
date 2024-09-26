@@ -202,3 +202,4 @@ C:\Users\mcabral\Desktop\Api-ci\Testing\obj\Debug\net7.0\Testing.csproj.CoreComp
 C:\Users\mcabral\Desktop\Api-ci\Testing\obj\Debug\net7.0\Testing.csproj.Up2Date
 C:\Users\mcabral\Desktop\Api-ci\Testing\obj\Debug\net7.0\Testing.genruntimeconfig.cache
 C:\Users\mcabral\Desktop\Api-ci\Testing\obj\Debug\net7.0\ref\Testing.dll
+C:\Users\mcabral\Desktop\Api-ci\Testing\obj\Debug\net7.0\Testing.sourcelink.json

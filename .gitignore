@@ -1,0 +1,34 @@
+# Ignorar carpetas de Visual Studio
+.vs/
+
+# Ignorar carpetas de compilación globales
+bin/
+obj/
+
+# Ignorar carpetas de compilación en Api
+Api/bin/
+Api/obj/
+
+# Ignorar carpetas de compilación en Testing
+Testing/bin/
+Testing/obj/
+
+# Ignorar carpetas de compilación en Services
+Services/bin/
+Services/obj/
+
+# Ignorar archivos de publicación
+Publish/
+
+# Ignorar archivos de paquetes NuGet generados
+*.nupkg
+*.snupkg
+
+# Ignorar archivos de usuario y de configuración
+*.user
+*.suo
+*.vscode
+
+# Ignorar resultados de análisis y temporales
+*.log
+*.cache
