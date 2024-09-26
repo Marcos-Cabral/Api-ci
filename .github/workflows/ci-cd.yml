@@ -49,9 +49,13 @@ jobs:
 
     - name: Limpiar carpeta Publish
       run: |
-            rm -rf ./Publish/*
+        rm -rf ./Publish/* || echo "No hay contenido en la carpeta Publish para eliminar"
+        
+        if [ ! -d "./Publish" ]; then
             mkdir ./Publish
-            echo "Carpeta Publish creada exitosamente." > ./Publish/info.txt
+        fi
+  
+        echo "Carpeta Publish creada exitosamente." > ./Publish/info.txt
 
 
     - name: Agregar cambios de la carpeta Publish
