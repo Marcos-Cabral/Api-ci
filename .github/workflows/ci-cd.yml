@@ -45,26 +45,26 @@ jobs:
           echo "✅ Todos los tests pasaron. ✅"
         else
           echo "❌ Algunos tests fallaron. ❌"
+          exit 1  # Fallar el job si hay tests fallidos
         fi
 
     - name: Limpiar carpeta Publish
       run: |
         rm -rf ./Publish/* || echo "No hay contenido en la carpeta Publish para eliminar"
         
-        if [ ! -d "./Publish" ]; then
-            mkdir ./Publish
-        fi
+        # Crear la carpeta Publish si no existe
+        mkdir -p ./Publish  # Usar -p para crear la carpeta solo si no existe
   
+        # Crear el archivo info.txt dentro de la carpeta Publish
         echo "Carpeta Publish creada exitosamente." > ./Publish/info.txt
-
 
     - name: Agregar cambios de la carpeta Publish
       run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          git add ./Publish/*
-          git commit -m "Limpieza de la carpeta Publish" || echo "No hay cambios para confirmar"
-          git push origin main
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add ./Publish/*
+        git commit -m "Limpieza de la carpeta Publish" || echo "No hay cambios para confirmar"
+        git push origin main
   
 
   publish:
