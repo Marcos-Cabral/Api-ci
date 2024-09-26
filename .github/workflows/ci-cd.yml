@@ -45,19 +45,31 @@ jobs:
           echo "✅ Todos los tests pasaron. ✅"
         else
           echo "❌ Algunos tests fallaron. ❌"
+          exit 1  # Fallar el job si hay tests fallidos
         fi
-
-    - name: Cambiar permisos de la carpeta Publish
-      run: |
-        chmod -R 777 ./Publish
 
     - name: Limpiar carpeta Publish
       run: |
-        rm -rf ./Publish/*
+        rm -rf ./Publish/* || echo "No hay contenido en la carpeta Publish para eliminar"
+        
+        # Crear la carpeta Publish si no existe
+        mkdir -p ./Publish  # Usar -p para crear la carpeta solo si no existe
+  
+        # Crear el archivo info.txt dentro de la carpeta Publish
+        echo "Carpeta Publish creada exitosamente." > ./Publish/info.txt
+
+    - name: Agregar cambios de la carpeta Publish
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add ./Publish/*
+        git commit -m "Limpieza de la carpeta Publish" || echo "No hay cambios para confirmar"
+        git push origin main
+  
 
   publish:
     runs-on: ubuntu-latest
-    needs: build-and-test  # El trabajo de publicación depende del trabajo de build-and-test
+    needs: build-and-test  
 
     steps:
     - name: Checkout code
@@ -68,17 +80,8 @@ jobs:
       with:
         dotnet-version: '7.0'
 
-    - name: Cambiar permisos de la carpeta Publish
-      run: |
-        chmod -R 777 ./Publish
-
-    - name: Limpiar carpeta Publish
-      run: |
-        rm -rf ./Publish/*
-    
     - name: Publicar la aplicación
       run: dotnet publish "Api/Api.csproj" -c Release --output ./Publish --self-contained true --runtime linux-x64
- 
 
     - name: Agregar archivos generados al repositorio
       run: |
