@@ -8,6 +8,7 @@ obj/
 # Ignorar carpetas de compilación en Api
 Api/bin/
 Api/obj/
+Api/Publish/
 
 # Ignorar carpetas de compilación en Testing
 Testing/bin/
