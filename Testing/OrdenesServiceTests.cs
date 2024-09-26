@@ -15,7 +15,8 @@ namespace Api.Tests
         }
 
         [Test]
-        public void GetAll_Returns_ListOfOrdenes()
+        [Description("Prueba que el GetAll de Orden devuelva una lista de objetos Orden, que no sea nula y contenga al menos un elemento.")]
+        public void OrdenGetAll()
         {
             List<Orden> result = _ordenesService.GetAll(); 
             Assert.IsNotNull(result, "El resultado no debe ser nulo.");
@@ -24,7 +25,8 @@ namespace Api.Tests
         }
 
         [Test]
-        public void GetByIdExists()
+        [Description("Prueba que GetById de Orden devuelva un objeto Orden existente en la lista.")]
+        public void OrdenGetByIdExists()
         {
             Orden orden = _ordenesService.GetById(_ordenesService.GetAll().First().Id);
 
@@ -33,7 +35,8 @@ namespace Api.Tests
         }
 
         [Test]
-        public void GetByIdNotExists()
+        [Description("Prueba que GetById de Orden devuelva nulo cuando se le pasa un ID que no existe.")]
+        public void OrdenGetByIdNotExists()
         {
             Orden orden = _ordenesService.GetById(99999999);
             Assert.IsNull(orden, "El resultado debe ser nulo.");
