@@ -9,7 +9,6 @@ namespace Api.Controllers
     [Route("[controller]")]
     public class OrdenesController : ControllerBase
     {
-
         public IOrdenesService _ordenesService { get; set; }
         public OrdenesController(IOrdenesService ordenesService)
         {
