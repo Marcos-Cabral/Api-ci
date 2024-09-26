@@ -47,13 +47,17 @@ jobs:
           echo "❌ Algunos tests fallaron. ❌"
         fi
 
-    - name: Cambiar permisos de la carpeta Publish
-      run: |
-        chmod -R 777 ./Publish
-
     - name: Limpiar carpeta Publish
       run: |
-        rm -rf ./Publish/*
+            rm -rf ./Publish/*
+
+    - name: Agregar cambios de la carpeta Publish
+      run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add ./Publish/*
+          git commit -m "Limpieza de la carpeta Publish" || echo "No hay cambios para confirmar"
+
 
   publish:
     runs-on: ubuntu-latest
@@ -68,17 +72,8 @@ jobs:
       with:
         dotnet-version: '7.0'
 
-    - name: Cambiar permisos de la carpeta Publish
-      run: |
-        chmod -R 777 ./Publish
-
-    - name: Limpiar carpeta Publish
-      run: |
-        rm -rf ./Publish/*
-    
     - name: Publicar la aplicación
       run: dotnet publish "Api/Api.csproj" -c Release --output ./Publish --self-contained true --runtime linux-x64
- 
 
     - name: Agregar archivos generados al repositorio
       run: |
