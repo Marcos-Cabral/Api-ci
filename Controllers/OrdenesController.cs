@@ -1,15 +1,9 @@
-using Api.Services;
 using Microsoft.AspNetCore.Mvc;
+using Services;
+using Services.Services;
 
 namespace Api.Controllers
 {
-    public class Orden
-    {
-        public int Id { get; set; }
-        public string Descripcion { get; set; }
-        public double Precio { get; set; }
-        public DateTime Fecha { get; set; }
-    }
 
     [ApiController]
     [Route("[controller]")]
