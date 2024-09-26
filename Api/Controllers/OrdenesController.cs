@@ -20,5 +20,11 @@ namespace Api.Controllers
         {
             return _ordenesService.GetAll();
         }
+
+        [HttpGet(Name = "OrdenById")]
+        public Orden GetById(int id)
+        {
+            return _ordenesService.GetAll().FirstOrDefault(e => e.Id == id);
+        }
     }
 }
