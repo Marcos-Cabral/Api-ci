@@ -50,6 +50,7 @@ jobs:
     - name: Limpiar carpeta Publish
       run: |
             rm -rf ./Publish/*
+            mkdir ./Publish
 
     - name: Agregar cambios de la carpeta Publish
       run: |
