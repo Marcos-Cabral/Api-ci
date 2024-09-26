@@ -13,13 +13,13 @@ namespace Services.Services
               .Fill(ei => ei.Descripcion).AsCanadianProvince()
               .Fill(ei => ei.Precio, () => A.Random.NextDouble() * 100);
 
-            _ordenes = A.ListOf<Orden>(10);
+            _ordenes = A.ListOf<Orden>(40);
         }
 
-        public List<Orden> GetAll()
-        {
-            return _ordenes;
-        }
+        //public List<Orden> GetAll()
+        //{
+        //    return _ordenes;
+        //}
 
         public Orden? GetById(int id)
         {

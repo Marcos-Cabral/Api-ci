@@ -21,7 +21,7 @@ namespace Api.Controllers
             return _ordenesService.GetAll();
         }
 
-        [HttpGet(Name = "OrdenById")]
+        [HttpGet("{id}", Name = "OrdenById")]
         public Orden? GetById(int id)
         {
             return _ordenesService.GetById(id);
