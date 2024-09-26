@@ -40,15 +40,11 @@ jobs:
     - name: Ejecutar tests
       id: run_tests
       run: |
-        dotnet test "Testing/Testing.csproj" --no-restore --verbosity normal
-        echo "Tests ejecutados."
-
-    - name: Mensaje de éxito o fracaso
-      run: |
-        if [[ "${{ steps.run_tests.outcome }}" == "success" ]]; then
-          echo "✅ Todos los tests pasaron."
+        dotnet test "Testing/Testing.csproj" --no-restore --verbosity minimal
+        if [ $? -eq 0 ]; then
+          echo "✅ Todos los tests pasaron. ✅"
         else
-          echo "❌ Algunos tests fallaron."
+          echo "❌ Algunos tests fallaron. ❌"
         fi
 
   publish:
