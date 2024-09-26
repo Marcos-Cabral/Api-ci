@@ -21,25 +21,22 @@ jobs:
         dotnet-version: '7.0'  
 
     - name: Restaurar dependencias
-      run: dotnet restore "Api/Api.csproj"  # Restaurar dependencias del proyecto principal
+      run: dotnet restore "Api/Api.csproj" 
 
     - name: Compilar el proyecto
-      run: dotnet build "Api/Api.csproj" --configuration Release --no-restore  # Compilar el proyecto principal
+      run: dotnet build "Api/Api.csproj" --configuration Release --no-restore 
 
     - name: Restaurar dependencias de tests
-      run: dotnet restore "Testing/Testing.csproj"  # Restaurar dependencias del proyecto de tests
+      run: dotnet restore "Testing/Testing.csproj"  
 
     - name: Compilar los tests
-      run: dotnet build "Testing/Testing.csproj" --configuration Release --no-restore  # Compilar el proyecto de tests
+      run: dotnet build "Testing/Testing.csproj" --configuration Release --no-restore  
 
     - name: Ejecutar tests
-      run: dotnet test "Testing/Testing.csproj" --no-restore --verbosity normal  # Ejecutar los tests desde el proyecto Testing
+      run: dotnet test "Testing/Testing.csproj" --no-restore 
 
     - name: Publicar la aplicación
-      run: dotnet publish "Api/Api.csproj" -c Release --output ./Publish --self-contained true --runtime linux-x64  # Publicar el proyecto principal
-
-    - name: Listar archivos publicados
-      run: ls -l ./Publish  # Listar los archivos en la carpeta Publish
+      run: dotnet publish "Api/Api.csproj" -c Release --output ./Publish --self-contained true --runtime linux-x64  
 
     - name: Agregar archivos generados al repositorio
       run: |
