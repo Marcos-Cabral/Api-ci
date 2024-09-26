@@ -38,7 +38,18 @@ jobs:
       run: dotnet build "Testing/Testing.csproj" --configuration Release --no-restore  
 
     - name: Ejecutar tests
-      run: dotnet test "Testing/Testing.csproj" --no-restore --verbosity minimal
+      id: run_tests
+      run: |
+        dotnet test "Testing/Testing.csproj" --no-restore --verbosity normal
+        echo "Tests ejecutados."
+
+    - name: Mensaje de éxito o fracaso
+      run: |
+        if [[ "${{ steps.run_tests.outcome }}" == "success" ]]; then
+          echo "✅ Todos los tests pasaron."
+        else
+          echo "❌ Algunos tests fallaron."
+        fi
 
   publish:
     runs-on: ubuntu-latest
