@@ -29,6 +29,7 @@ namespace Testing
         public void OrdenGetByIdExists()
         {
             Orden? orden = _ordenesService.GetById(_ordenesService.GetAll().First().Id);
+            orden = null;
             Assert.IsNotNull(orden, "El resultado no debe ser nulo.");
             Assert.IsInstanceOf<Orden>(orden, "El resultado debe ser una lista de Orden.");
         }
